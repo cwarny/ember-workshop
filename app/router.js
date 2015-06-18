@@ -6,7 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	
+	this.route("campaigns", {path:"/"}, function() {
+		this.route("campaign", {path: "/campaign/:election_year"}, function() {
+			this.route("candidate", {path: "/candidate/:candidate_id"});
+		});
+	});
 });
 
 export default Router;

@@ -1,0 +1,11 @@
+<h2>
+	<ul class="nav nav-pills">
+		<li><a class="title">Presidential Campaign</a></li>
+		{{#each model as |campaign|}}
+			{{#link-to "campaigns.campaign" campaign tagName="li"}}
+				<a href>{{campaign.election_year}}</a>
+			{{/link-to}}
+		{{/each}}
+	</ul>
+</h2>
+{{outlet}}

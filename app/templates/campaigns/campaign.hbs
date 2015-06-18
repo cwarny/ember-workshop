@@ -1,0 +1,5 @@
+{{#each model.candidates as |candidate|}}
+	{{#link-to "campaigns.campaign.candidate" candidate}}
+		<img class="clipme" src={{candidate.pic_url}}>
+	{{/link-to}}
+{{/each}}
