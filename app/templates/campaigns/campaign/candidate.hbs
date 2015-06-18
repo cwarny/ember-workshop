@@ -8,5 +8,51 @@
 		<img class="clipme" src={{model.pic_url}}>
 	</div>
 	<div class="col-xs-8">
+		{{#if model.summary_note}}
+			<blockquote>
+				{{model.summary_note}}
+			</blockquote>
+		{{/if}}
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Amount</th>
+					<th>Party rank</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Cash on hand</th>
+					<td>{{model.cash_on_hand}}</td>
+					<td>{{model.cash_on_hand_party_rank}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Total disbursements</th>
+					<td>{{model.total_disbursements}}</td>
+					<td>{{model.total_disbursements_party_rank}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Cash on hand</th>
+					<td>{{model.cash_on_hand}}</td>
+					<td>{{model.cash_on_hand_party_rank}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Max contribution</th>
+					<td>{{model.contributions_max}}</td>
+					<td>{{model.contributions_max_party_rank}}</td>
+				</tr>
+				<tr>
+					<th scope="row">Net individual contributions</th>
+					<td>{{model.net_individual_contributions}}</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">Net PAC contributions</th>
+					<td>{{model.net_pac_contributions}}</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

@@ -1,5 +1,16 @@
-{{#each model.candidates as |candidate|}}
-	{{#link-to "campaigns.campaign.candidate" candidate}}
-		<img class="clipme" src={{candidate.pic_url}}>
-	{{/link-to}}
-{{/each}}
+<div class="row">
+	<div class="col-xs-6">
+		{{multi-timeline data=contributions}}
+	</div>
+	<div class="col-xs-6">
+	</div>
+</div>	
+<div class="row">
+	<div class="col-xs-12">
+		{{#each model.candidates as |candidate|}}
+			{{#link-to "campaigns.campaign.candidate" candidate}}
+				<img class="clipme" src={{candidate.pic_url}}>
+			{{/link-to}}
+		{{/each}}
+	</div>
+</div>
